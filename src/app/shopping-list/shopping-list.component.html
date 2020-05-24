@@ -1,0 +1,12 @@
+<div class="row">
+    <div class="col-xs-10 w-100">
+        <app-shopping-list-edit></app-shopping-list-edit>
+        <hr>
+        <ul class="list-group d-block" *ngFor='let i of ingredients;let ii = index'>
+            <a class="list-group-item" style="cursor: pointer;"
+            (click)="onEditItem(ii)">
+            {{i.name}} ( {{i.amount}} )
+            </a>
+        </ul>
+    </div>
+</div>
